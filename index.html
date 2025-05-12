@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>腸道健康調查問卷</title>
+  <style>
+    body { font-family: "Noto Sans TC", sans-serif; background: #f4f6f9; padding: 20px; }
+    .container { max-width: 800px; background: white; padding: 30px; margin: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; }
+    label { font-weight: bold; display: block; margin-top: 20px; }
+    .options label { font-weight: normal; display: inline-block; margin-right: 15px; }
+    textarea { width: 100%; margin-top: 10px; padding: 8px; }
+    button { margin-top: 30px; padding: 10px 20px; background: #0078D7; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    #result { margin-top: 30px; padding: 20px; background: #ecf0f1; border-radius: 8px; }
+    .product-box { margin-top: 15px; background: #fff; padding: 15px; border: 1px solid #ccc; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>腸道健康調查問卷</h1>
+    <form id="healthForm">
+<label>1. 您的年齡：</label><div class="options"><label><input type="radio" name="q1_age" value="4:小於20歲">小於20歲</label><label><input type="radio" name="q1_age" value="4:20-29歲">20-29歲</label><label><input type="radio" name="q1_age" value="4:30-39歲">30-39歲</label><label><input type="radio" name="q1_age" value="4:40-49歲">40-49歲</label><label><input type="radio" name="q1_age" value="4:50歲以上">50歲以上</label></div>
+<label>2. 您的性別：</label><div class="options"><label><input type="radio" name="q2_gender" value="0:男">男</label><label><input type="radio" name="q2_gender" value="0:女">女</label></div>
+<label>3. 您是否有輪班或夜班工作？</label><div class="options"><label><input type="radio" name="q3_shift" value="1:有">有</label><label><input type="radio" name="q3_shift" value="4:無">無</label></div>
+<label>4. 睡眠情況如何？</label><div class="options"><label><input type="radio" name="q4_sleep" value="4:非常好">非常好</label><label><input type="radio" name="q4_sleep" value="3:還可">還可</label><label><input type="radio" name="q4_sleep" value="2:有時好有時不好">有時好有時不好</label><label><input type="radio" name="q4_sleep" value="1:很難睡">很難睡</label></div>
+<label>5. 您平均每天睡眠幾小時？</label><div class="options"><label><input type="radio" name="q5_hours" value="1:少於5小時">少於5小時</label><label><input type="radio" name="q5_hours" value="2:5-6小時">5-6小時</label><label><input type="radio" name="q5_hours" value="3:7-8小時">7-8小時</label><label><input type="radio" name="q5_hours" value="4:9小時以上">9小時以上</label></div>
+<label>6. 是否常感到疲勞？</label><div class="options"><label><input type="radio" name="q6_fatigue" value="4:幾乎沒有">幾乎沒有</label><label><input type="radio" name="q6_fatigue" value="3:偶爾">偶爾</label><label><input type="radio" name="q6_fatigue" value="2:比較常見">比較常見</label><label><input type="radio" name="q6_fatigue" value="1:常常如此">常常如此</label></div>
+<label>7. 有無腸胃不適（如腹瀉、便秘、胃脹氣？</label><div class="options"><label><input type="radio" name="q7_gut" value="4:沒有">沒有</label><label><input type="radio" name="q7_gut" value="2:偶爾">偶爾</label><label><input type="radio" name="q7_gut" value="1:常常">常常</label></div>
+<label>8. 有無排便異常（如便秘、腹瀉）？</label><div class="options"><label><input type="radio" name="q8_bowel" value="4:沒有">沒有</label><label><input type="radio" name="q8_bowel" value="2:偶爾">偶爾</label><label><input type="radio" name="q8_bowel" value="1:常常">常常</label></div>
+<label>9. 有無腹脹、胃酸倒流？</label><div class="options"><label><input type="radio" name="q9_bloat" value="4:沒有">沒有</label><label><input type="radio" name="q9_bloat" value="2:偶爾">偶爾</label><label><input type="radio" name="q9_bloat" value="1:常常">常常</label></div>
+<label>10. 有無情緒低落、緊張煩躁？</label><div class="options"><label><input type="radio" name="q10_emotion" value="4:沒有">沒有</label><label><input type="radio" name="q10_emotion" value="2:偶爾">偶爾</label><label><input type="radio" name="q10_emotion" value="1:常常">常常</label></div>
+<label>11. 肌膚有鬆弛、暗啞、皺紋等老化現象？</label><div class="options"><label><input type="radio" name="q11_skin" value="4:沒有">沒有</label><label><input type="radio" name="q11_skin" value="2:有一點">有一點</label><label><input type="radio" name="q11_skin" value="1:很多">很多</label></div>
+<label>12. 每週大約運動幾次？（計入散步、跳舞等輕量運動）</label><div class="options"><label><input type="radio" name="q12_ex_freq" value="1:沒有">沒有</label><label><input type="radio" name="q12_ex_freq" value="2:1-2次">1-2次</label><label><input type="radio" name="q12_ex_freq" value="4:3次以上">3次以上</label></div>
+<label>13. 每次運動時間？</label><div class="options"><label><input type="radio" name="q13_ex_dur" value="1:少於15分鐘">少於15分鐘</label><label><input type="radio" name="q13_ex_dur" value="2:15-30分鐘">15-30分鐘</label><label><input type="radio" name="q13_ex_dur" value="4:30分鐘以上">30分鐘以上</label></div>
+
+    <label>14. 想了解哪些健康資訊（複選）：</label>
+    <div class="options">
+      <label><input type="checkbox" name="q14_interest" value="睡眠改善"> 睡眠改善</label>
+      <label><input type="checkbox" name="q14_interest" value="心情管理"> 情緒管理</label>
+      <label><input type="checkbox" name="q14_interest" value="腸胃健康"> 腸胃健康</label>
+      <label><input type="checkbox" name="q14_interest" value="皮膚保養"> 皮膚保養</label>
+      <label><input type="checkbox" name="q14_interest" value="運動健身"> 運動健身</label>
+    </div>
+
+    <label>其他補充：</label>
+    <textarea name="comments" rows="3"></textarea>
+    <button type="submit">提交</button>
+  </form>
+
+  <div id="result"></div>
+</div>
+
+<script>
+document.getElementById("healthForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const requiredRadios = [
+    "q1_age", "q2_gender", "q3_shift", "q4_sleep", "q5_hours", "q6_fatigue",
+    "q7_gut", "q8_bowel", "q9_bloat", "q10_emotion", "q11_skin",
+    "q12_ex_freq", "q13_ex_dur"
+  ];
+  for (const name of requiredRadios) {
+    const selected = document.querySelector(`input[name="${name}"]:checked`);
+    if (!selected) {
+      alert("請回答所有必填題目（1~14題）");
+      return;
+    }
+  }
+
+  const interestChecked = document.querySelectorAll('input[name="q14_interest"]:checked').length > 0;
+  if (!interestChecked) {
+    alert("請至少選擇一項您感興趣的主題（第14題）");
+    return;
+  }
+  const formData = new FormData(this);
+  let score = 0;
+  let risks = { gut: false, emotion: false, skin: false, muscle: false };
+  let gutCount = 0;
+  let emotionCount = 0;
+  const skipKeys = ['q2_gender', 'q14_interest', 'comments'];
+
+  for (const [key, val] of formData.entries()) {
+    if (!skipKeys.includes(key)) {
+      const [num] = val.split(":");
+      const parsed = parseInt(num);
+      if (!isNaN(parsed)) {
+        score += parsed;
+
+        if (['q7_gut', 'q8_bowel', 'q9_bloat'].includes(key) && parsed <= 2) gutCount++;
+        if (['q4_sleep', 'q10_emotion'].includes(key) && parsed <= 2) emotionCount++;
+        if (key === 'q11_skin' && parsed <= 2) risks.skin = true;
+        if (key === 'q6_fatigue' && parsed <= 2) risks.muscle = true;
+      }
+    }
+  }
+
+  if (gutCount >= 2) risks.gut = true;
+  if (emotionCount >= 1) risks.emotion = true;
+
+  let suggestion = '';
+  if (score >= 38) suggestion = "✅ 健康良好，請繼續保持良好生活習慣。";
+  else if (score >= 30) suggestion = "⚠️ 需注意健康狀況，建議調整作息與飲食。";
+  else suggestion = "❤️ 建議改善生活方式，必要時尋求專業醫療協助。";
+
+  let products = '';
+  if (risks.gut) products += "<li><a href='https://hskgene.com/products/probiolife-probiotics' target='_blank'>Probiolife 金裝益纖菌</a>：腸道健康保養</li>";
+  if (risks.emotion) products += "<li><a href='https://hskgene.com/products/probiolife-lpc37' target='_blank'>Probiolife 益緒寧</a>：情緒與睡眠調節</li>";
+  if (risks.muscle) products += "<li><a href='https://hskgene.com/products/probiolife-slim-protein-familypack' target='_blank'>Probiolife 益纖蛋白</a>：增肌減脂，提升體力</li>";
+  if (risks.skin) products += "<li><a href='https://hskgene.com/products/probiolife-algae-oil' target='_blank'>Probiolife 健藻油</a>：滋養肌膚與心腦保養</li>";
+
+  // 收集所有欄位資料
+  const fullData = {};
+  for (const [key, val] of formData.entries()) {
+    if (fullData[key]) {
+      if (!Array.isArray(fullData[key])) fullData[key] = [fullData[key]];
+      fullData[key].push(val);
+    } else {
+      fullData[key] = val;
+    }
+  }
+  fullData["score"] = score;
+  fullData["risks"] = risks;
+  fullData["suggestion"] = suggestion;
+  const now = new Date();
+  const twTime = new Date(now.getTime() + 8 * 60 * 60 * 1000);
+  const timestampTW = twTime.toISOString().replace("T", " ").substring(0, 19);
+  fullData["timestamp"] = "'" + timestampTW + "'";
+
+  if (Array.isArray(fullData["q14_interest"])) {
+    fullData["q14_interest"] = fullData["q14_interest"].join(", ");
+  }
+  fullData["risk_gut"] = risks.gut;
+  fullData["risk_emotion"] = risks.emotion;
+  fullData["risk_skin"] = risks.skin;
+  fullData["risk_muscle"] = risks.muscle;
+  delete fullData["risks"];
+
+  // 發送 webhook
+  fetch("https://hook.us2.make.com/klsylbhfeljeooktadgf6ejh9jwv5mzd", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(fullData)
+  })
+    .then(r => console.log("✅ Webhook sent"))
+    .catch(err => console.error("Webhook failed", err));
+
+  // 處理興趣產品推薦
+  const interestMap = {
+  "睡眠改善": "Probiolife 益緒寧 - 情緒與睡眠調節",
+  "心情管理": "Probiolife 益緒寧 - 情緒與睡眠調節",
+  "腸胃健康": "Probiolife 金裝益纖菌 - 腸道健康保養",
+  "皮膚保養": "Probiolife 健藻油 - 肌膚與心腦保養",
+  "運動健身": "Probiolife 益纖蛋白 - 增肌減脂與體力補充"
+};
+
+const interestLinks = {
+  "睡眠改善": "https://hskgene.com/products/probiolife-lpc37",
+  "心情管理": "https://hskgene.com/products/probiolife-lpc37",
+  "腸胃健康": "https://hskgene.com/products/probiolife-probiotics",
+  "皮膚保養": "https://hskgene.com/products/probiolife-algae-oil",
+  "運動健身": "https://hskgene.com/products/probiolife-slim-protein-familypack"
+};
+
+
+const interestProducts = new Set();
+const interests = formData.getAll("q14_interest");
+if (Array.isArray(interests)) {
+  interests.forEach(i => {
+    if (interestMap[i] && interestLinks[i]) {
+      interestProducts.add("<li><a href='" + interestLinks[i] + "' target='_blank'>" + interestMap[i] + "</a></li>");
+    }
+  });
+}
+
+
+  // 顯示結果
+  document.getElementById("result").innerHTML = `
+    <div class="product-box">
+      <h3>總分：${score} 分</h3>
+      <p>${suggestion}</p>
+      ${products ? "<h4>🔎 推薦產品：</h4><ul>" + products + "</ul>" : ""}
+      ${interestProducts.size > 0 ? "<h4>🎯 您感興趣的主題：</h4><ul>" + Array.from(interestProducts).join('') + "</ul>" : "<p>未勾選感興趣主題</p>"}
+    </div>
+  `;
+  alert("✅ 感謝您的填寫，結果已顯示於下方！");
+  this.reset();
+});
+</script>
+
+  
+</script>
+</body>
+</html>
