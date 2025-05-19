@@ -138,7 +138,7 @@ document.getElementById("healthForm").addEventListener("submit", function (e) {
   delete fullData["risks"];
 
   // 發送 webhook
-  fetch("https://hook.us2.make.com/h1e2btupss2a3d432iu978sxqc82juts", {
+  fetch("https://hook.us2.make.com/h1e2btupss2a3d432iu978sxqc82juts0", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(fullData)
